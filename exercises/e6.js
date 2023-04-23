@@ -4,8 +4,13 @@
 // getClientWithNoMoney(bankAccounts) => ['Kevin', 'Jon']
 
 export function getClientWithNoMoney(array) {
-  // Your code goes here...
-
+  let zeroBalance = [];
+  for (let user of array) {
+    if (user.balance === 0) {
+      zeroBalance.push(user.name);
+    }
+  }
+  return zeroBalance;
 }
 
 // === TEST YOURSELF ===
